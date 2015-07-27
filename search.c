@@ -32,7 +32,53 @@ void sort_int(int *array, int len)
 		array[j+1] = temp;
 	}
 }
-int bin_search(int *array, int len, int num)
+int binary_search_int(int *array, int len, int num)
+{
+	int mid, low = 0, high = len - 1;
+	while(low <= high){
+		mid = (low + high) / 2;
+		if(array[mid] == num)
+			return 1;
+		else if(array[mid] > num)
+			high = mid - 1;
+		else
+			low = mid + 1;
+	}
+	return 0;	
+}
+void fill_float(float *array, int len)
+{
+	printf("Please enter %d floats each followed by a space.\n");
+	int i;
+	for(i = 0; i < len; i++) {
+		scanf("%d", &array[i]);
+	}
+}
+int linear_search_float(float *array, int len, float num)
+{
+	int i;
+	for(i = 0; i < len; i++) {
+		if(array[i] == num)
+		return 1;
+	}
+	return 0;
+}
+void sort_float(float *array, int len)
+{
+	int i, j;
+	float temp;
+	for(i = 1; i < len; i++)
+	{
+		temp = array[i];
+		j = i - 1;
+		while(j >= 0 && temp < array[j]){
+			array[j+1] = array[j];
+			j--;
+		}
+		array[j+1] = temp;
+	}
+}
+int binary_search_float(float *array, int len, float num)
 {
 	int mid, low = 0, high = len - 1;
 	while(low <= high){
