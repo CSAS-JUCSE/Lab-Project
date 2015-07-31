@@ -1,7 +1,8 @@
 #include <stdio.h>
 typedef long long unsigned ll;
 
-
+/*Utility function to find the factorial n with
+the iterative method*/
 ll facto_iter(int n)
 {
 	int i;
@@ -13,6 +14,8 @@ ll facto_iter(int n)
 	}
 	return a;
 }
+/*Utility function to find the factorial n with
+the recursive method*/
 ll facto_recur(int n)
 {
 	if(n == 0 || n == 1) {
@@ -20,6 +23,8 @@ ll facto_recur(int n)
 	}
 	return n * facto_recur(n - 1);
 }
+/*Main driver function to compute the factorial of 
+an integer n iteratively and recursively*/
 int main()
 {
 	int n, ch;

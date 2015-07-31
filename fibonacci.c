@@ -1,6 +1,8 @@
 #include <stdio.h>
 typedef long long unsigned ll;
 
+/*Utility function to find the n-th Fibonacci number 
+with the iterative method*/
 ll fibo_iter(int n)
 {
 	int i;
@@ -15,6 +17,8 @@ ll fibo_iter(int n)
 	}
 	return c;
 }
+/*Utility function to find the n-th Fibonacci number 
+with the recursive method*/
 ll fibo_recur(int n)
 {
 	if(n == 0 || n == 1) {
@@ -22,6 +26,8 @@ ll fibo_recur(int n)
 	}
 	return fibo_recur(n - 1) + fibo_recur(n - 2);
 }
+/*Main driver function to generate the n-th Fibonacci 
+number iteratively and recursively*/
 int main()
 {
 	int n, ch;
